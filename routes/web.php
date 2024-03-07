@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MediaController;
+use App\Http\Controllers\KotaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,5 @@ use App\Http\Controllers\MediaController;
 Route::get('/',[MediaController::class,'index']);
 Route::get('/media/formulir',[MediaController::class,'formulir']);
 Route::post('/media/hasil',[MediaController::class,'hasil']);
+
+Route::resource('kotas', KotaController::class);
