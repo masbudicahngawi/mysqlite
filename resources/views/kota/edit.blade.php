@@ -1,8 +1,9 @@
-<h5>Halaman EDIT Kota</h5>
+<h5>Halaman EDIT/HAPUS Kota</h5>
 
 <br/>
 
-<form method="post" action="{{ route('kotas.store') }}">
+<form method="post" action="{{ route('kotas.update', $data->id) }}">
+	@method('PUT')
 	@csrf
 	<table>
 		<tr>
@@ -15,7 +16,6 @@
 		</tr>
 		<tr>
 			<td><button type="submit" class="btn btn-primary">Submit</button></td>
-			<td></td>
 		</tr>
 	</table>
 </form>

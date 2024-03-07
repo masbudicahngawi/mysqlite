@@ -64,9 +64,16 @@ class KotaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, kota $kota)
+    public function update(Request $request, $id)
     {
-        //
+        $data = Kota::find($id);
+
+        $data->nama = $request->input('nama');
+        $data->provinsi = $request->input('provinsi');
+
+        $data->save();
+
+        return redirect()->route('kotas.index')->with('message', 'Perubahan Data berhasil disimpan !');
     }
 
     /**
