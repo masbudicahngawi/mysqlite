@@ -5,6 +5,8 @@
 <h3 style="color:green">{{ session('message') }}</h3>
 @endif
 
+<a href="{{ route('kotas.create') }}">Tambah Data</a>
+
 <table border="1">
 	<tr>
 		<td>No</td>

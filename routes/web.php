@@ -16,7 +16,7 @@ use App\Http\Controllers\KotaController;
 */
 
 
-Route::get('/',[MediaController::class,'index']);
+Route::redirect('/','/kotas');
 Route::get('/media/formulir',[MediaController::class,'formulir']);
 Route::post('/media/hasil',[MediaController::class,'hasil']);
 
